@@ -1,20 +1,21 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
     <ion-title>
-      Blank
+      Cat breeds
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-card *ngFor="let cat of cats">
+    <ion-card-header>
+      {{ cat.name }}
+    </ion-card-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+    <ion-card-content>
+      <ion-img [src]="cat.imageUrl" alt="{{ cat.name }} Cat"></ion-img>
+      <p>Origin: {{ cat.origin }}</p>
+      <p>Intelligence: {{ cat.intelligence }}</p>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

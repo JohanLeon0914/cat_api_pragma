@@ -20,12 +20,4 @@ export class HomePage {
     });
   }
 
-  getCatImage(id: string): string {
-    let imageUrl: string = '';
-    this.api.getCatImage(id).subscribe((catImage) => {
-      imageUrl = catImage.url
-    })
-    return imageUrl;
-  }
-
 }

@@ -1,0 +1,7 @@
+{
+  "name": "cat_api",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
